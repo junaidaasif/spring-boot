@@ -1,0 +1,32 @@
+package com.techment;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.techment.dao.IProductDao;
+
+@SpringBootApplication
+public class SpringBootJpa1Application implements CommandLineRunner{
+	
+	@Autowired
+	IProductDao iProductDao;
+	
+	
+	
+	
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootJpa1Application.class, args);
+	}
+		@Override
+		public void run(String...  args) throws Exception{
+			System.out.println("Hello this my first spring boot");
+		
+			Product product1 = new Product("laptop", "Laptop", 4500);
+			Product product2 = new Product("laptop", "Laptop", 4500);
+		
+		}
+		
+}
+
